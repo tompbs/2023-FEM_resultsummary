@@ -1,0 +1,67 @@
+main {
+    background-color: #d5e1ef;
+    height: 100vh;
+    font-size: 18px;
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: auto;
+}
+
+.result {
+    background-color: rgb(100, 100, 226);
+    border-radius: 20px;
+    text-align: center;
+    width: 370px;
+    padding: 40px;
+}
+
+.circle {
+    background-color: blue;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.bigscore {
+    color: white;
+    font-size: xx-large;
+}
+
+.summary {
+    padding: 50px;
+    width: 370px;
+    padding: 40px;
+
+}
+
+.bar {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: aqua;
+    border-radius: 10px;
+
+}
+
+.icon {
+    flex
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
