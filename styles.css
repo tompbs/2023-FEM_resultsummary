@@ -1,10 +1,15 @@
 body {
     background-color: aqua;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+p {
+    margin: 0;
 }
 
 main {
     height: 100vh;
-    font-size: 18px;
     display: flex;
 }
 
@@ -15,6 +20,7 @@ main {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin: auto;
+    font-size: 22px;
 
 }
 
@@ -28,42 +34,83 @@ main {
     background-color: rgb(100, 100, 226);
     border-radius: 20px;
     text-align: center;
-    width: 370px;
+    width: 290px;
+    height: 432px;
     padding: 40px;
+    color: hsl(241, 100%, 89%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .circle {
     background-color: blue;
     border-radius: 50%;
-    width: 140px;
-    height: 140px;
-    margin: auto;
-    margin-top: 50px;
-
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
 }
 
 .bigscore {
     color: white;
-    font-size: xx-large;
+    font-size: 70px;
+    font-weight: 800;
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: hsl(221, 100%, 96%);
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .summary {
     padding: 50px;
-    width: 370px;
+    width: 290px;
+    height: 432px;
     padding: 40px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .bar {
     display: flex;
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
     justify-content: space-between;
     background-color: aqua;
     border-radius: 10px;
+    font-size: 18px;
 
 }
 
+button {
+    width: 100%;
+    height: 56px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: #303b59;
+    border-radius: 28px;
+    font-size: 18px;
+    color: hsl(221, 100%, 96%);
+    font-weight: 700;
 
+}
 
 .attribution {
     font-size: 11px;
