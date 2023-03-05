@@ -1,17 +1,27 @@
+body {
+    background-color: aqua;
+}
+
 main {
-    background-color: #d5e1ef;
     height: 100vh;
     font-size: 18px;
     display: flex;
 }
 
 .card {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin: auto;
+
+}
+
+@media (max-width: 940px) {
+    .card {
+        width: 370px;
+    }
 }
 
 .result {
@@ -53,9 +63,7 @@ main {
 
 }
 
-.icon {
-    flex
-}
+
 
 .attribution {
     font-size: 11px;
