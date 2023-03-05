@@ -3,6 +3,7 @@ fetch('./data.json')
     .then(response => response.json())
     .then(data => {
         const barsContainer = document.querySelector('.barsContainer');
+        let totalScore = 0;
 
         // Loop through the data to create the bar divs
         data.forEach(item => {
@@ -29,5 +30,11 @@ fetch('./data.json')
             bar.appendChild(maxScore);
 
             barsContainer.appendChild(bar);
+
+            totalScore += item.score;
+
         });
+        const averageScore = Math.round(totalScore / data.length);
+        const bigscore = document.querySelector('.bigscore');
+        bigscore.textContent = averageScore.toString();
     });
