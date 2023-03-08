@@ -98,6 +98,15 @@ h2 {
 
 }
 
+.category {
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.score {
+    margin-right: 7px;
+}
+
 button {
     width: 100%;
     height: 56px;

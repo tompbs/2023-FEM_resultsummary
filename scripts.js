@@ -1,40 +1,51 @@
-// Fetch the data from the JSON file
 fetch('./data.json')
     .then(response => response.json())
     .then(data => {
+        // display result bars
         const barsContainer = document.querySelector('.barsContainer');
-        let totalScore = 0;
+        const barList = data.map(create_bar_from_data);
+        barsContainer.append(...barList)
 
-        // Loop through the data to create the bar divs
-        data.forEach(item => {
-            const bar = document.createElement('div');
-            bar.classList.add('bar');
-
-            const icon = document.createElement('img');
-            icon.classList.add('icon');
-            icon.src = item.icon;
-            bar.appendChild(icon);
-
-            const category = document.createElement('p');
-            category.classList.add('category');
-            category.textContent = item.category;
-            bar.appendChild(category);
-
-            const score = document.createElement('p');
-            score.classList.add('score');
-            score.textContent = item.score;
-            bar.appendChild(score);
-
-            const maxScore = document.createElement('p');
-            maxScore.textContent = '/ 100';
-            bar.appendChild(maxScore);
-
-            barsContainer.appendChild(bar);
-
-            totalScore += item.score;
-
-        });
-        const averageScore = Math.round(totalScore / data.length);
+        // display average score
+        const averageScore = compute_average_score(data);
+        const roundedScore = averageScore.toFixed(0);
         const bigscore = document.querySelector('.bigscore');
-        bigscore.textContent = averageScore.toString();
-    });
+        bigscore.textContent = roundedScore.toString();
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+
+function create_bar_from_data(data) {
+
+    const bar = document.createElement('div');
+    bar.classList.add('bar');
+
+    const icon = document.createElement('img');
+    icon.classList.add('icon');
+    icon.src = data.icon;
+    bar.appendChild(icon);
+
+    const category = document.createElement('p');
+    category.classList.add('category');
+    category.textContent = data.category;
+    bar.appendChild(category);
+
+    const score = document.createElement('p');
+    score.classList.add('score');
+    score.textContent = data.score;
+    bar.appendChild(score);
+
+    const maxScore = document.createElement('p');
+    maxScore.textContent = '/ 100';
+    bar.appendChild(maxScore);
+
+    return bar;
+}
+
+
+function compute_average_score(data) {
+    const score_array = data.map(item => item.score);
+    const summed_score = score_array.reduce((a, b) => a + b);
+    const average_score = summed_score / score_array.length;
+    return average_score;
+}
