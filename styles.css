@@ -1,12 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: aqua;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
 }
 
-p {
-    margin: 0;
-}
 
 main {
     height: 100vh;
@@ -26,7 +28,11 @@ main {
 
 @media (max-width: 940px) {
     .card {
-        width: 370px;
+        flex-direction: column;
+    }
+
+    footer {
+        margin: 120px;
     }
 }
 
