@@ -3,8 +3,25 @@
     padding: 0;
 }
 
+:root {
+    --primary-red: hsl(0, 100%, 67%);
+    --primary-yellow: hsl(39, 100%, 56%);
+    --primary-green: hsl(166, 100%, 37%);
+    --primary-blue: hsl(234, 85%, 45%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-pale-blue: hsl(221, 100%, 96%);
+    --neutral-lavender: hsl(241, 100%, 89%);
+    --neutral-gray-blue: hsl(224, 30%, 27%);
+
+    --gradient-slate-blue: hsl(252, 100%, 67%);
+    --gradient-royal-blue: hsl(241, 81%, 54%);
+    --gradient-violet-blue: hsla(256, 72%, 46%, 1);
+    --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+}
+
 body {
-    background-color: aqua;
+    background-color: var(--neutral-pale-blue);
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
 }
@@ -16,14 +33,13 @@ main {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--neutral-white);
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin: auto;
     font-size: 22px;
-
 }
 
 @media (max-width: 940px) {
@@ -37,13 +53,13 @@ main {
 }
 
 .result {
-    background-color: rgb(100, 100, 226);
+    background-image: linear-gradient(to bottom, var(--gradient-slate-blue), var(--gradient-royal-blue));
     border-radius: 20px;
     text-align: center;
     width: 290px;
     height: 432px;
     padding: 40px;
-    color: hsl(241, 100%, 89%);
+    color: var(--neutral-pale-blue);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,7 +67,7 @@ main {
 }
 
 .circle {
-    background-color: blue;
+    background-image: linear-gradient(to bottom, var(--gradient-violet-blue), var(--gradient-persian-blue));
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -62,7 +78,7 @@ main {
 }
 
 .bigscore {
-    color: white;
+    color: var(--neutral-white);
     font-size: 70px;
     font-weight: 800;
     margin: 0;
@@ -71,7 +87,7 @@ main {
 h1 {
     font-size: 30px;
     font-weight: 800;
-    color: hsl(221, 100%, 96%);
+    color: var(--neutral-white);
     margin: 0;
 }
 
@@ -98,9 +114,9 @@ h2 {
     padding: 20px;
     margin-bottom: 15px;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: hsla(234, 85%, 45%,10%);
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 18px;image.png
 
 }
 
@@ -119,12 +135,15 @@ button {
     border: none;
     padding: 0;
     margin: 0;
-    background-color: #303b59;
+    background-color: var(--neutral-gray-blue);
     border-radius: 28px;
     font-size: 18px;
-    color: hsl(221, 100%, 96%);
+    color: var(--neutral-pale-blue);
     font-weight: 700;
+}
 
+button:hover {
+    background-image: linear-gradient(to bottom, var(--gradient-slate-blue), var(--gradient-royal-blue));
 }
 
 .attribution {
