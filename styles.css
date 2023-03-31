@@ -4,10 +4,10 @@
 }
 
 :root {
-    --primary-red: hsl(0, 100%, 67%);
-    --primary-yellow: hsl(39, 100%, 56%);
-    --primary-green: hsl(166, 100%, 37%);
-    --primary-blue: hsl(234, 85%, 45%);
+    --primary-red: hsla(0, 100%, 67%, 20%);
+    --primary-yellow: hsla(39, 100%, 56%, 20%);
+    --primary-green: hsla(166, 100%, 37%, 20%);
+    --primary-blue: hsla(234, 85%, 45%, 20%);
 
     --neutral-white: hsl(0, 0%, 100%);
     --neutral-pale-blue: hsl(221, 100%, 96%);
@@ -114,10 +114,24 @@ h2 {
     padding: 20px;
     margin-bottom: 15px;
     justify-content: space-between;
-    background-color: hsla(234, 85%, 45%,10%);
     border-radius: 10px;
-    font-size: 18px;image.png
+    font-size: 18px;
+}
 
+.bar[data-category="Reaction"] {
+    background: var(--primary-red);
+}
+
+.bar[data-category="Memory"] {
+    background: var(--primary-yellow);
+}
+
+.bar[data-category="Verbal"] {
+    background: var(--primary-green);
+}
+
+.bar[data-category="Visual"] {
+    background: var(--primary-blue);
 }
 
 .category {
